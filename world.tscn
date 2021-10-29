@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://client.gd" type="Script" id=1]
+[ext_resource path="res://server.gd" type="Script" id=2]
+
+[node name="World" type="Node2D"]
+
+[node name="Ground" type="Polygon2D" parent="."]
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 0, 550, 1024, 550, 1024, 550, 1024, 600, 1024, 600, 0, 600 )
+
+[node name="Server" type="Node2D" parent="."]
+position = Vector2( 512, 0 )
+script = ExtResource( 2 )
+color = Color( 1, 0, 0, 0.498039 )
+
+[node name="Client" type="Node2D" parent="."]
+position = Vector2( 512, 0 )
+script = ExtResource( 1 )
+color = Color( 0, 0, 1, 0.498039 )
